@@ -28,7 +28,6 @@
     overflow-x: hidden;
   }
 
-  /* Animated background */
   body::before {
     content: '';
     position: fixed;
@@ -47,7 +46,6 @@
     100% { opacity: 1; }
   }
 
-  /* Grid lines overlay */
   body::after {
     content: '';
     position: fixed;
@@ -68,7 +66,6 @@
     padding: 0 20px 60px;
   }
 
-  /* Header */
   header {
     padding: 40px 0 30px;
     text-align: center;
@@ -121,7 +118,6 @@
     animation: titleSlide 0.7s ease both 0.35s;
   }
 
-  /* Chat window */
   .chat-window {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -165,11 +161,7 @@
     50% { box-shadow: 0 0 28px rgba(255,45,120,0.7); }
   }
 
-  .bot-info .bot-name {
-    font-weight: 600;
-    font-size: 15px;
-  }
-
+  .bot-info .bot-name { font-weight: 600; font-size: 15px; }
   .bot-info .bot-status {
     font-size: 12px;
     color: var(--electric-cyan);
@@ -179,8 +171,7 @@
   }
 
   .status-dot {
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--electric-cyan);
     animation: dotPulse 1.5s ease-in-out infinite;
@@ -191,7 +182,6 @@
     50% { opacity: 0.4; transform: scale(0.7); }
   }
 
-  /* Messages */
   .messages {
     padding: 24px;
     display: flex;
@@ -222,8 +212,7 @@
   .msg.user { flex-direction: row-reverse; }
 
   .msg-avatar {
-    width: 32px;
-    height: 32px;
+    width: 32px; height: 32px;
     border-radius: 50%;
     flex-shrink: 0;
     display: flex;
@@ -263,7 +252,6 @@
     text-align: right;
   }
 
-  /* Slider input area */
   .input-area {
     padding: 20px 24px 24px;
     border-top: 1px solid var(--border);
@@ -302,8 +290,7 @@
 
   .genre-label.action { color: var(--neon-orange); }
   .genre-label.comedy { color: var(--gold); }
-  .genre-label.scifi  { color: var(--electric-cyan); }
-  .genre-label.romance { color: var(--neon-pink); }
+  .genre-label.horror { color: var(--electric-cyan); }
 
   input[type=range] {
     flex: 1;
@@ -315,15 +302,13 @@
     transition: all 0.2s;
   }
 
-  input#action  { background: linear-gradient(to right, var(--neon-orange) var(--pct, 50%), rgba(255,255,255,0.1) var(--pct, 50%)); }
-  input#comedy  { background: linear-gradient(to right, var(--gold) var(--pct, 50%), rgba(255,255,255,0.1) var(--pct, 50%)); }
-  input#scifi   { background: linear-gradient(to right, var(--electric-cyan) var(--pct, 50%), rgba(255,255,255,0.1) var(--pct, 50%)); }
-  input#romance { background: linear-gradient(to right, var(--neon-pink) var(--pct, 50%), rgba(255,255,255,0.1) var(--pct, 50%)); }
+  input#action { background: linear-gradient(to right, var(--neon-orange) var(--pct, 50%), rgba(255,255,255,0.1) var(--pct, 50%)); }
+  input#comedy { background: linear-gradient(to right, var(--gold) var(--pct, 50%), rgba(255,255,255,0.1) var(--pct, 50%)); }
+  input#horror { background: linear-gradient(to right, var(--electric-cyan) var(--pct, 50%), rgba(255,255,255,0.1) var(--pct, 50%)); }
 
   input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
+    width: 18px; height: 18px;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 0 8px rgba(255,255,255,0.5);
@@ -344,7 +329,6 @@
     color: #fff;
   }
 
-  /* Submit button */
   .submit-btn {
     width: 100%;
     padding: 15px;
@@ -361,15 +345,10 @@
     display: none;
   }
 
-  .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255,45,120,0.5);
-  }
-
+  .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,45,120,0.5); }
   .submit-btn:active { transform: scale(0.98); }
   .submit-btn.visible { display: block; animation: fadeIn 0.4s ease both; }
 
-  /* Results cards */
   .results-grid {
     display: flex;
     flex-direction: column;
@@ -389,10 +368,7 @@
     animation: cardIn 0.4s cubic-bezier(0.34,1.4,0.64,1) both;
   }
 
-  .movie-card:hover {
-    transform: translateX(4px);
-    background: rgba(255,255,255,0.07);
-  }
+  .movie-card:hover { transform: translateX(4px); background: rgba(255,255,255,0.07); }
 
   @keyframes cardIn {
     from { transform: translateX(-20px); opacity: 0; }
@@ -412,6 +388,7 @@
 
   .movie-info { flex: 1; }
   .movie-title { font-weight: 600; font-size: 15px; }
+
   .movie-score-bar {
     height: 4px;
     background: rgba(255,255,255,0.08);
@@ -436,7 +413,6 @@
     white-space: nowrap;
   }
 
-  /* Typing indicator */
   .typing {
     display: flex;
     gap: 5px;
@@ -445,8 +421,7 @@
   }
 
   .typing span {
-    width: 7px;
-    height: 7px;
+    width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--muted);
     animation: typingBounce 1.2s ease-in-out infinite;
@@ -460,7 +435,6 @@
     30% { transform: translateY(-8px); background: var(--neon-orange); }
   }
 
-  /* Restart */
   .restart-btn {
     display: none;
     margin-top: 14px;
@@ -512,14 +486,9 @@
           <span class="slider-val" id="comedyVal">5</span>
         </div>
         <div class="slider-row">
-          <span class="genre-label scifi">Sci-Fi</span>
-          <input type="range" id="scifi" min="1" max="10" value="5">
-          <span class="slider-val" id="scifiVal">5</span>
-        </div>
-        <div class="slider-row">
-          <span class="genre-label romance">Romance</span>
-          <input type="range" id="romance" min="1" max="10" value="5">
-          <span class="slider-val" id="romanceVal">5</span>
+          <span class="genre-label horror">Horror</span>
+          <input type="range" id="horror" min="1" max="10" value="5">
+          <span class="slider-val" id="horrorVal">5</span>
         </div>
       </div>
       <button class="submit-btn" id="submitBtn" onclick="getRecommendations()">Find My Movies →</button>
@@ -530,21 +499,20 @@
 
 <script>
   const movies = [
-    { name: "Interstellar",  action: 5, comedy: 1, scifi: 10, romance: 2  },
-    { name: "Titanic",       action: 1, comedy: 2, scifi: 0,  romance: 10 },
-    { name: "Avengers",      action: 10,comedy: 5, scifi: 8,  romance: 1  },
-    { name: "John Wick",     action: 10,comedy: 1, scifi: 2,  romance: 0  },
-    { name: "The Notebook",  action: 1, comedy: 2, scifi: 0,  romance: 10 },
-    { name: "Inception",     action: 7, comedy: 2, scifi: 10, romance: 1  },
+    { name: "Interstellar", action: 5,  comedy: 1, horror: 2 },
+    { name: "Titanic",      action: 1,  comedy: 2, horror: 1 },
+    { name: "Avengers",     action: 10, comedy: 5, horror: 3 },
+    { name: "John Wick",    action: 10, comedy: 1, horror: 6 },
+    { name: "The Notebook", action: 1,  comedy: 2, horror: 1 },
+    { name: "Inception",    action: 7,  comedy: 2, horror: 7 },
   ];
 
   const emojis = { "Interstellar":"🚀", "Titanic":"🚢", "Avengers":"🦸", "John Wick":"🔫", "The Notebook":"📖", "Inception":"🌀" };
 
-  function calculateScore(movie, a, c, s, r) {
+  function calculateScore(movie, a, c, h) {
     return (10 - Math.abs(movie.action - a))
          + (10 - Math.abs(movie.comedy - c))
-         + (10 - Math.abs(movie.scifi - s))
-         + (10 - Math.abs(movie.romance - r));
+         + (10 - Math.abs(movie.horror - h));
   }
 
   function addMsg(type, content, delay = 0) {
@@ -554,9 +522,7 @@
         const div = document.createElement('div');
         div.className = `msg ${type}`;
         const avatar = type === 'bot' ? '🎥' : '👤';
-        div.innerHTML = `
-          <div class="msg-avatar">${avatar}</div>
-          <div class="msg-bubble">${content}</div>`;
+        div.innerHTML = `<div class="msg-avatar">${avatar}</div><div class="msg-bubble">${content}</div>`;
         msgs.appendChild(div);
         msgs.scrollTop = msgs.scrollHeight;
         resolve();
@@ -592,8 +558,7 @@
     document.getElementById('submitBtn').classList.add('visible');
   }
 
-  // Slider live update
-  ['action','comedy','scifi','romance'].forEach(id => {
+  ['action','comedy','horror'].forEach(id => {
     const slider = document.getElementById(id);
     const val = document.getElementById(id + 'Val');
     slider.addEventListener('input', function() {
@@ -601,7 +566,6 @@
       const pct = ((this.value - 1) / 9 * 100).toFixed(1) + '%';
       this.style.setProperty('--pct', pct);
     });
-    // Init fill
     const initPct = ((slider.value - 1) / 9 * 100).toFixed(1) + '%';
     slider.style.setProperty('--pct', initPct);
   });
@@ -609,13 +573,12 @@
   async function getRecommendations() {
     const a = +document.getElementById('action').value;
     const c = +document.getElementById('comedy').value;
-    const s = +document.getElementById('scifi').value;
-    const r = +document.getElementById('romance').value;
+    const h = +document.getElementById('horror').value;
 
     document.getElementById('genreSliders').classList.remove('visible');
     document.getElementById('submitBtn').classList.remove('visible');
 
-    await addMsg('user', `Action: <strong>${a}</strong> &nbsp;|&nbsp; Comedy: <strong>${c}</strong> &nbsp;|&nbsp; Sci-Fi: <strong>${s}</strong> &nbsp;|&nbsp; Romance: <strong>${r}</strong>`);
+    await addMsg('user', `Action: <strong>${a}</strong> &nbsp;|&nbsp; Comedy: <strong>${c}</strong> &nbsp;|&nbsp; Horror: <strong>${h}</strong>`);
 
     showTyping();
     await new Promise(r => setTimeout(r, 1200));
@@ -628,11 +591,11 @@
 
     const scored = movies.map(m => ({
       ...m,
-      score: calculateScore(m, a, c, s, r),
+      score: calculateScore(m, a, c, h),
       emoji: emojis[m.name] || '🎬'
     })).sort((x, y) => y.score - x.score);
 
-    const maxScore = 40;
+    const maxScore = 30;
 
     const cardsHTML = `<div class="results-grid">${
       scored.map((m, i) => `
@@ -644,13 +607,12 @@
               <div class="movie-score-fill" data-pct="${(m.score/maxScore*100).toFixed(0)}"></div>
             </div>
           </div>
-          <div class="movie-score-num">${m.score}/40</div>
+          <div class="movie-score-num">${m.score}/30</div>
         </div>`).join('')
     }</div>`;
 
-    await addMsg('bot', `Here are your top picks! The higher the score, the better it matches your taste: 🎯<br><br>${cardsHTML}`);
+    await addMsg('bot', `Here are your top picks! The higher the score, the better the match: 🎯<br><br>${cardsHTML}`);
 
-    // Animate score bars
     setTimeout(() => {
       document.querySelectorAll('.movie-score-fill').forEach(el => {
         el.style.width = el.dataset.pct + '%';
@@ -660,7 +622,7 @@
     showTyping();
     await new Promise(r => setTimeout(r, 800));
     removeTyping();
-    await addMsg('bot', `Your top pick is <strong>${scored[0].emoji} ${scored[0].name}</strong> with a ${scored[0].score}/40 match score! Happy watching! 🥂`);
+    await addMsg('bot', `Your top pick is <strong>${scored[0].emoji} ${scored[0].name}</strong> with a ${scored[0].score}/30 match score! Happy watching! 🥂`);
 
     document.getElementById('restartBtn').classList.add('visible');
   }
@@ -668,11 +630,10 @@
   function restart() {
     const msgs = document.getElementById('messages');
     msgs.innerHTML = '';
-    ['action','comedy','scifi','romance'].forEach(id => {
+    ['action','comedy','horror'].forEach(id => {
       document.getElementById(id).value = 5;
       document.getElementById(id + 'Val').textContent = 5;
-      const initPct = ((5 - 1) / 9 * 100).toFixed(1) + '%';
-      document.getElementById(id).style.setProperty('--pct', initPct);
+      document.getElementById(id).style.setProperty('--pct', '44.4%');
     });
     document.getElementById('restartBtn').classList.remove('visible');
     document.getElementById('genreSliders').classList.remove('visible');
